@@ -1,49 +1,68 @@
 users:
-  jordanwillis:
-    username: jordanwillis
+  JavaScriptLearner:
+    username: JavaScriptLearner
     articleIds:
       - 1
     commentIds:
       - 1
-      - 2
       - 3
+  CurrentStudent:
+    username: CurrentStudent
+    articleIds:
+      - 2
+    commentIds:
+      - 2
 articles:
   '1':
     id: 1
-    title: new article
-    url: 'http://www.article.com'
-    username: jordanwillis
+    title: Codecademy Overview & Intro
+    url: 'https://www.crunchbase.com/organization/codecademy'
+    username: JavaScriptLearner
     commentIds:
       - 1
       - 2
-      - 3
     upvotedBy:
-      - jordanwillis
+      - JavaScriptLearner
+      - CurrentStudent
     downvotedBy: []
     comments:
       - &ref_0
         id: 1
-        body: this is awsome!
-        username: jordanwillis
+        body: Checkout this cool article about codecademy and their funding details!
+        username: JavaScriptLearner
         articleId: 1
         upvotedBy:
-          - jordanwillis
+          - JavaScriptLearner
+          - CurrentStudent
         downvotedBy: []
       - &ref_1
         id: 2
-        body: again?
-        username: jordanwillis
+        body: This was a good read!
+        username: CurrentStudent
         articleId: 1
         upvotedBy: []
         downvotedBy: []
+  '2':
+    id: 2
+    title: 50 resources to help you start learning JavaScript in 2018
+    url: >-
+      https://medium.com/coderbyte/50-resources-to-help-you-start-learning-javascript-in-2017-4c70b222a3b9
+    username: CurrentStudent
+    commentIds:
+      - 3
+    upvotedBy:
+      - CurrentStudent
+      - JavaScriptLearner
+    downvotedBy: []
+    comments:
       - &ref_2
         id: 3
-        body: and even more?
-        username: jordanwillis
-        articleId: 1
+        body: I think I need to start learning pronto...
+        username: JavaScriptLearner
+        articleId: 2
         upvotedBy: []
         downvotedBy: []
-nextArticleId: 2
+nextArticleId: 3
 comments:
   '1': *ref_0
   '2': *ref_1
