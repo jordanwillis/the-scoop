@@ -1,0 +1,51 @@
+users:
+  jordanwillis:
+    username: jordanwillis
+    articleIds:
+      - 1
+    commentIds:
+      - 1
+      - 2
+      - 3
+articles:
+  '1':
+    id: 1
+    title: new article
+    url: 'http://www.article.com'
+    username: jordanwillis
+    commentIds:
+      - 1
+      - 2
+      - 3
+    upvotedBy:
+      - jordanwillis
+    downvotedBy: []
+    comments:
+      - &ref_0
+        id: 1
+        body: this is awsome!
+        username: jordanwillis
+        articleId: 1
+        upvotedBy:
+          - jordanwillis
+        downvotedBy: []
+      - &ref_1
+        id: 2
+        body: again?
+        username: jordanwillis
+        articleId: 1
+        upvotedBy: []
+        downvotedBy: []
+      - &ref_2
+        id: 3
+        body: and even more?
+        username: jordanwillis
+        articleId: 1
+        upvotedBy: []
+        downvotedBy: []
+nextArticleId: 2
+comments:
+  '1': *ref_0
+  '2': *ref_1
+  '3': *ref_2
+nextCommentId: 4

@@ -362,6 +362,22 @@ function downvoteComment(url, request) {
   return response;
 }
 
+const fs = require('fs');
+const yaml = require('node-yaml');
+const yamlFile = './database.yaml';
+
+function saveDatabase() {
+  yaml.write(yamlFile, database);
+}
+
+function loadDatabase() {
+  if (fs.existsSync(yamlFile)) {
+    return yaml.readSync(yamlFile);
+  }
+
+  return database;  
+}
+
 // Write all code above this line.
 
 const http = require('http');
